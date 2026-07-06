@@ -14,15 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions: read-all    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Output event name
-        run: echo "Event: ${{ github.event_name }}"
-      - name: Output branch name
-        run: echo "Branch: ${{ github.ref_name }}"
-      - name: List all files
-        run: ls -R  
-
-        
-        
-  
+      - run: |        
+          echo "Event: ${{ github.event_name }}"
+          echo "Branch: ${{ github.ref_name }}"
+          ls -R
+      - uses: actions/checkout@v7.0.0
