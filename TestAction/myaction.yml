@@ -1,0 +1,8 @@
+name: Say hello
+author: SDavey
+description: Say hello and show the time
+
+inputs:
+  who-to-greet:
+    description: who to say hello to
+    
