@@ -5,4 +5,15 @@ description: Say hello and show the time
 inputs:
   who-to-greet:
     description: who to say hello to
-    
+    required: true
+    default: World
+
+outputs:
+  time:
+    description: The time we said hello
+
+runs:
+  using: docker
+  image: Dockerfile
+  env: 
+    INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}  
